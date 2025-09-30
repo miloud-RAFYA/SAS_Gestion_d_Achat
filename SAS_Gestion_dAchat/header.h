@@ -1,14 +1,14 @@
-#ifndef CLAIANT_H
-#define CLAIANT_H
+#ifndef HEADER_H
+#define HEADER_H
 #include <stdio.h>
 #include <string.h>
 typedef struct
 {
-    int idClient=0;
+    int idClient;
     char nom[20];
     char prenom[20];
     char email[50];
-    float solde = 0;
+    float solde;
 } client;
 client Client;
 typedef struct {
