@@ -3,6 +3,7 @@
 #include <string.h>
 #include "produit.h"
 #include "Client.h"
+#include "Historique.h"
 client Client;
 void Ajout_Profil()
 {
@@ -60,6 +61,8 @@ void Achat()
         printf("Solde insuffisant. Votre solde actuel est de %.2f MAD\n", Client.solde);
         return;
     }
+    char *nom=listeProduits[id].nom;
+    AjouterHistorique(nom,quantite,total);
     Client.solde -= total;
     listeProduits[pos].stock -= quantite;
 

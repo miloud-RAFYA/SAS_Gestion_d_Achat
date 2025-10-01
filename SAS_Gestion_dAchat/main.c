@@ -2,6 +2,7 @@
 #include "Client.h"
 #include "Produit.h"
 #include "Menu.h"
+#include "Historique.h"
 int main()
 {   Ajout_Profil();
     Menu_principale();

@@ -2,12 +2,13 @@
 #include "Client.h"
 #include "Produit.h"
 #include "Menu.h"
+#include "Historique.h"
 void Menu_principale()
 { 
     int ch;
     do
     {
-        printf("\t\t\t#Gestion d Achat#\n");
+        printf("\n\t\t\t#Gestion d Achat#\n");
         printf("\t1. Gestion du profil client\n");
         printf("\t2. Gestion du solde virtuel\n");
         printf("\t3. Consultation des produits\n");
@@ -31,7 +32,7 @@ void Menu_principale()
             Achat();
             break;
         case 5:
-        statique();
+        statistiques();
             break;
     } 
     }while (ch != 0);
@@ -42,7 +43,7 @@ void Catalogue_Produits()
         int ch;
         do
         {
-            printf("\t\t\t\t\t#Consultation des produits#\n");
+            printf("\n\t\t\t\t\t#Consultation des produits#\n");
             printf("\t\t1.Affichage catalogue .");
             printf("\t\t2.Recherche produits.\n");
             printf("\t\t3. Tri des produits Par prix .\n");
@@ -74,7 +75,7 @@ void Catalogue_Produits()
 void Gestion_client(){
     int ch;
     do{
-        printf("\t\t\t# Gestion du profil client#\n");
+        printf("\n\t\t\t# Gestion du profil client#\n");
         printf("\t\t1. Affiche un profile .\n");
         printf("\t\t2. Modifier un profile .\n");
         printf("\t\t0. reteur le menu principle .\n ");
@@ -98,7 +99,7 @@ void Gestion_solde(){
     int ch;
     do
     {
-        printf("\t\t\t#Gestion du Solde Virtuel# .\n");
+        printf("\n\t\t\t#Gestion du Solde Virtuel# .\n");
         printf("\t\t1.Consultation du solde .\n");
         printf("\t\t2.Depot d argent .\n");
         printf("\t\t0. reteur a le menu principale .\n");
@@ -111,6 +112,27 @@ void Gestion_solde(){
             break;
         case 2:
             Depot_argent();
+            break;
+        }
+    }while(ch!=0);
+}
+void statistiques(){
+     int ch;
+    do
+    {
+        printf("\n\t\t\t#Menu Statistiques# .\n");
+        printf("\t\t1.Voir les statistiques generales\n");
+        printf("\t\t2.Consulter l historique des achats.\n");
+        printf("\t\t0. reteur a le menu principale .\n");
+        printf("\t\t\t entre le choix :");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case 1:
+           statique();;
+            break;
+        case 2:
+           AfficherHistorique();
             break;
         }
     }while(ch!=0);

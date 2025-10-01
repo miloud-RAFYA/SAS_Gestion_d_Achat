@@ -5,5 +5,5 @@ void Menu_principale();
 void Catalogue_Produits();
 void Gestion_client();
 void Gestion_solde();
-
+void statistiques();
 #endif
